@@ -1,4 +1,4 @@
-import React, { Component,useContext,useState } from 'react'
+import React, { Component,useContext,useState,useEffect } from 'react'
 import Menu from './svg/bars-solid.svg'
 import Close from './svg/times-solid.svg'
 import CartIcon from './svg/shopping-cart-solid.svg'
@@ -9,22 +9,22 @@ import {DataContext} from './Context'
 
 
 const Header = () => {
-    // static contextType = DataContext;
  const context =useContext(DataContext)
+ const {card} = context;
 
  const [state,setState] = useState({toggle: false})
+ const total_count = card.map((card) =>{ return( card.count)});
 
-//  console.log(context);
+ const total_counts = total_count.reduce((a, b) => a + b, 0);
 
    function menuToggle (){
         setState({toggle: !state.toggle})
     }
 
 
-    // render() {
         const {toggle} = state;
-        const {cart} = context;
-        return (
+
+                  return (
             <header>
                 <div className="menu" onClick={menuToggle}>
                     <img src={Menu} alt="" width="20"/>
@@ -44,7 +44,7 @@ const Header = () => {
                         </li>
                     </ul>
                     <div className="nav-cart">
-                        {/* <span>{cart.length}</span> */}
+                        <span>{total_counts}</span>
                         <Link to="/cart">
                             <img src={CartIcon} alt="" width="20"/>
                         </Link>
@@ -52,7 +52,6 @@ const Header = () => {
                 </nav>
             </header>
         )
-    // }
 }
 
 export default Header

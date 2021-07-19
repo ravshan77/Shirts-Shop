@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 const Colors = (props) => {
-    // render() {
+    
         const {colors} = props;
         return (
             <div className="colors">
@@ -12,7 +12,6 @@ const Colors = (props) => {
                 }
             </div>
         )
-    // }
 }
 
 export default Colors

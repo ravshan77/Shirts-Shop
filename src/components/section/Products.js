@@ -6,27 +6,21 @@ import '../css/Products.css'
 const Products = () => {
 
     const context = useContext(DataContext)
-console.log(context);
-    
-    // static contextType = DataContext;
 
-    // render() {
-        const {products,addCart} = context;
+        const {products,addCard} = context;
+
         return (
             <div id="product">
                {
                    products?.map(product =>(
-                       <div className="card" key={product._id}>
-                           <Link to={`/product/${product._id}`}>
+                       <div  className="card" key={product._id}>
                                <img src={product.src} alt=""/>
-                           </Link>
                            <div className="content">
                                <h3>
-                                   <Link to={`/product/${product._id}`}>{product.title}</Link>
+                                   {product.title}
                                </h3>
                                <span>${product.price}</span>
-                               <p>{product.description}</p>
-                               <button onClick={()=> addCart(product._id)}>Add to cart</button>
+                               <button onClick={() => addCard(product._id)}>Add to cart</button>
                            </div>
                        </div>
                    ))
