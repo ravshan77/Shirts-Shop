@@ -1,0 +1,49 @@
+.Text_home {
+  width: 100%;
+  font-size: 22px;
+  letter-spacing: 2px;
+  height: 80px;
+  font-weight: bold;
+}
+
+.mediaDiv {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lorem {
+  width: 45%;
+}
+
+.lorem_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 180px;
+  margin: 30px 0;
+}
+
+.with{
+ width: 50%;
+}
+
+@media (max-width: 768px) {
+  .mediaDiv {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px red;
+  }
+
+  .lorem {
+    width: 90%;
+  }
+}
+
+
+.b{
+  border: solid 2px blue;
+}

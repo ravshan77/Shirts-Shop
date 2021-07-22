@@ -1,7 +1,7 @@
 import React, { Component,useState,useContext } from 'react'
 import {Link} from 'react-router-dom'
-import {DataContext} from '../Context'
-import '../css/Products.css'
+import {DataContext} from '../../store/Context'
+import '../../css/Products.css'
 
 const Products = () => {
 
@@ -20,7 +20,7 @@ const Products = () => {
                                    {product.title}
                                </h3>
                                <span>${product.price}</span>
-                               <button onClick={() => addCard(product._id)}>Add to cart</button>
+                               <button className="btn btn--black" onClick={() => addCard(product._id)}>Add to cart</button>
                            </div>
                        </div>
                    ))

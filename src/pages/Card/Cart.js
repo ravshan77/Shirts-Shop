@@ -1,16 +1,16 @@
 import React, { Component,useContext,useEffect ,useState} from 'react'
-import {DataContext} from '../Context'
+import {DataContext} from '../../store/Context'
 import {Link} from 'react-router-dom'
-import Colors from './Colors'
-import '../css/Details.css'
-import '../css/Cart.css'
+import Colors from '../Color/Colors'
+import '../../css/Cart.css'
 
 
-const Cart =  (props) => {
+
+const Cart =  () => {
     let context = useContext(DataContext)
     const {card,increase,decrease,removeCard} = context;
     
-    const total = card.map((card) => card.price * card.count);
+    const total = card?.map((card) => card.price * card.count);
     const total_cost = total.reduce((a, b) => a + b, 0);
 
 

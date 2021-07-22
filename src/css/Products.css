@@ -13,6 +13,9 @@
   box-shadow: 2px 8px 20px #ddd;
   margin: 10px;
   transition: 0.5s linear;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
 }
 .card:hover {
   box-shadow: none;
@@ -42,16 +45,31 @@
 .card p {
   margin: 10px 0;
 }
-.card button {
-  border: none;
-  outline: none;
-  background: #333;
-  color: white;
+
+.btn {
   width: 100%;
   height: 40px;
   display: block;
-  cursor: pointer;
-  text-transform: uppercase;
   letter-spacing: 2px;
   margin: 15px 0;
+  font-family: "monospace";
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #333;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn--black {
+  background-position: left bottom;
+  color: #fff;
+  background-color: black;
+}
+
+.btn--black:hover {
+  background: linear-gradient(to left, transparent 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #000;
+  font-size: 16px;
 }
