@@ -5,6 +5,9 @@ import Cart from '../pages/Card/Cart'
 import Home from '../pages/Home/Home'
 import Payment from '../pages/Payment/Payment'
 import AdminPanel from '../adminPanel'
+import Contact from '../pages/Contact/contact'
+import About from '../pages/About/About'
+
 
 export class Section extends Component {
     render() {
@@ -15,6 +18,8 @@ export class Section extends Component {
                     <Route path="/cart" component={Cart}  exact/>
                     <Route path="/payment" component={Payment} exact />                    
                     <Route path="/admin" component={AdminPanel} exact />
+                    <Route path="/contact" component={Contact} exact />
+                    <Route path="/about" component={About} exact />
 
             </section>
         )

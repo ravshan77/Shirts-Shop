@@ -1,7 +1,72 @@
-.dfh{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    margin-bottom: 60px;
+.dfh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  background: url(https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=600) no-repeat fixed;
+  background-position: 100%;
+  background-size: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.boxs {
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+  }
+}
+
+.boxs span {
+  position: absolute;
+  color: #fff;
+  font-size: 2.5em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 0 10px;
+  background-color: linear-gradient(90deg, transparent ,rgba(0,0,0, 0.5), transparent);
+  transform-style: preserve-3d;
+  line-height: 0.76em;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  transform:translate(-50%,-50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(100px);
+}
+
+.boxs span i:nth-child(1) {
+  font-style: initial;
+  color: red;
+  margin: 20px;
+}
+
+.boxs span i:nth-child(2) {
+  font-style: initial;
+  color: #b0b4b6;
+  margin: 20px;
+}
+
+@media (max-width: 600px) {
+  .boxs span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .con {
+    background-attachment:scroll ;
+  }
 }

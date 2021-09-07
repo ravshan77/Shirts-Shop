@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Corusel_Ui from "./corusel-Ui"
 import "../../css/Home.css"
 import Text_Home from "./Text_Home"
-
+import Focus from "./Focus"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +27,9 @@ function Home() {
       </section>
       <section className="">
           <Text_Home />
+      </section>
+      <section className="">
+          <Focus />
       </section>
     </div>
   );

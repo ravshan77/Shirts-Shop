@@ -3,6 +3,7 @@ import {DataContext} from '../../store/Context'
 import {Link} from 'react-router-dom'
 import Colors from '../Color/Colors'
 import '../../css/Cart.css'
+import "../../css/Details.css"
 
 
 

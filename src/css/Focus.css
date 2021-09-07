@@ -1,0 +1,60 @@
+.focus-section {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.focus-section h2 {
+  position: relative;
+  color: #fff;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 800;
+  z-index: 2;
+  transition: 2s;
+  height: 100px;
+}
+
+.focus-section h2:hover {
+  filter: blur(10px);
+  transform: scale(1.2);
+}
+
+.focus-section img {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  pointer-events: none;
+  filter: blur(20px);
+  transition: 2s;
+  object-fit: cover;
+}
+
+.focus-section h2:hover ~ img {
+  top: -20px;
+  left: -20px;
+  width: 140%;
+  height: 140%;
+  filter: blur(0px);
+}
+
+@media (min-width: 278px) and (max-width: 411px) {
+  .focus-section h2 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 652px) {
+  .focus-section h2 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+}

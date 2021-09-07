@@ -1,0 +1,127 @@
+.rounds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  height: 80vh;
+  width: 100%;
+}
+
+.circle {
+  transform-style: preserve-3d;
+  animation: animateTwo 10s linear infinite;
+}
+
+.circle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  font-size: 3em;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  padding: 5px 11px;
+  transform: rotateY(calc(var(--i) * calc(360deg / 14))) translateZ(200px);
+  border-top: 2px solid rgb(143, 138, 138);
+  border-bottom: 2px solid rgb(143, 138, 138);
+}
+
+@keyframes animateTwo {
+  0% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+      translateZ(-30px);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+      translateZ(-30px);
+  }
+}
+
+.colrr {
+  color: red;
+}
+
+.colrw {
+  color: rgb(126, 121, 121);
+  font-style: initial;
+}
+
+.colrb {
+  font-style: initial;
+  color: #12b5ff;
+}
+
+.about-section {
+  margin-top: 15px;
+  background: url(https://images.unsplash.com/photo-1606415378401-173a0ceafd45?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) no-repeat left;
+  background-size: 70%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 100px 0;
+  object-fit: cover;
+}
+
+.inner-container{
+  width: 55%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 150px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size:30px;
+  font-weight:800;
+}
+
+.about-border{
+  height: 3px;
+  width: 145px;
+  background-color: rgb(245, 60, 28);
+}
+
+.about-text{
+  font-size: 13px;
+  color: #545454;
+  line-height:30px;
+  text-align: justify;
+  margin-bottom:40px;
+}
+
+.about-button{
+  border: none;
+  padding: 8px 15px;
+  background-color: rgb(245, 60, 28);
+  color:#fff;
+}
+
+.about-button:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width:1200px){
+  .inner-container{
+    padding: 80px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .about-section{
+    padding:100px 40px;
+    background-size: 100%;
+  }
+
+  .inner-container{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px){
+  .about-section{
+    padding:0;
+  }
+
+  .inner-container{
+    padding: 60px;
+  }
+}

@@ -7,116 +7,58 @@ import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import "../../css/Home.css"
 
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const tutorialSteps = [
-  {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-  {
-    label: "Bird",
-    imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-  {
-    label: "Bali, Indonesia",
-    imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80",
-  },
-  {
-    label: "NeONBRAND Digital Marketing, Las Vegas, United States",
-    imgPath:
-      "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-];
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     flexGrow: 1,
-  },
-  img: {
-    height: 455,
-    display: "block",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     overflow: "hidden",
-    width: "100%",
-    objectFit: "cover",
+    minHeight:"100vh",
+    fontFamily:"poppins",
+    boxSizing: "border-box",
   },
-  dots: {
-    background: "none",
-    position: "absolute",
-    bottom: 22,
-    right: "50px",
-  },
-  back: {
-    position: "absolute",
-    top: "0%",
-    left: 0,
-    height: "100%",
-    color: "#fff",
-  },
-  next: {
-    top: "0%",
-    right: 0,
-    position: "absolute",
-    height: "100%",
-  },
-  btns: {
-    color: "#fff",
-    width: "45px",
-    height: "100%",
-  },
-
-  scrollBtn: {
-    position: "absolute",
-    color: "#fff",
-    bottom: 10, 
-    right: "50%",
-    width: "45px",
-    height: "45px",
-    
-  }
 }));
 
 function Corusel_Ui() {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
-
-  const handleWindov = () => {
-    window.scrollTo({
-      top: 600,
-      behavior: "smooth",
-    });
-  };
-
 
   return (
-    <div className={classes.root}>
-      <AutoPlaySwipeableViews
+    <div className="con">
+      <div className="boxs">
+        <span style={{"--i":1}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":2}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":3}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":4}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":5}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":6}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":7}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":8}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":9}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":10}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":11}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":12}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":13}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":14}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":15}} ><i>Olline</i> shirts <i>shop</i></span>
+        <span style={{"--i":16}} ><i>Olline</i> shirts <i>shop</i></span>
+      </div>
+    </div>
+  );
+}
+
+export default Corusel_Ui;
+
+{/* <ExpandMoreIcon onClick={()=> handleWindov()} className={classes.scrollBtn}  /> */}
+
+
+{/* <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -162,10 +104,101 @@ function Corusel_Ui() {
         ) : (
           <KeyboardArrowLeft className={classes.btns} />
         )}
-      </Button>
-        <ExpandMoreIcon onClick={()=> handleWindov()} className={classes.scrollBtn}  />
-    </div>
-  );
-}
+      </Button> */}
 
-export default Corusel_Ui;
+
+      // img: {
+      //   height: 455,
+      //   display: "block",
+      //   overflow: "hidden",
+      //   width: "100%",
+      //   objectFit: "cover",
+      // },
+      // dots: {
+      //   background: "none",
+      //   position: "absolute",
+      //   bottom: 22,
+      //   right: "50px",
+      // },
+      // back: {
+      //   position: "absolute",
+      //   top: "0%",
+      //   left: 0,
+      //   height: "100%",
+      //   color: "#fff",
+      // },
+      // next: {
+      //   top: "0%",
+      //   right: 0,
+      //   position: "absolute",
+      //   height: "100%",
+      // },
+      // btns: {
+      //   color: "#fff",
+      //   width: "45px",
+      //   height: "100%",
+      // },
+    
+      // scrollBtn: {
+      //   position: "absolute",
+      //   color: "#fff",
+      //   bottom: 10, 
+      //   right: "50%",
+      //   width: "45px",
+      //   height: "45px",
+        
+      // }
+
+
+      // const theme = useTheme();
+      // const [activeStep, setActiveStep] = React.useState(0);
+      // const maxSteps = tutorialSteps.length;
+    
+      // const handleNext = () => {
+      //   setActiveStep((prevActiveStep) => prevActiveStep + 1);
+      // };
+    
+      // const handleBack = () => {
+      //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
+      // };
+    
+      // const handleStepChange = (step) => {
+      //   setActiveStep(step);
+      // };
+    
+      // const handleWindov = () => {
+      //   window.scrollTo({
+      //     top: 600,
+      //     behavior: "smooth",
+      //   });
+      // };
+    
+
+      // const tutorialSteps = [
+      //   {
+      //     label: "San Francisco – Oakland Bay Bridge, United States",
+      //     imgPath:
+      //       "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+      //   },
+      //   {
+      //     label: "Bird",
+      //     imgPath:
+      //       "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+      //   },
+      //   {
+      //     label: "Bali, Indonesia",
+      //     imgPath:
+      //       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80",
+      //   },
+      //   {
+      //     label: "NeONBRAND Digital Marketing, Las Vegas, United States",
+      //     imgPath:
+      //       "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60",
+      //   },
+      //   {
+      //     label: "Goč, Serbia",
+      //     imgPath:
+      //       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+      //   },
+      // ];
+      
