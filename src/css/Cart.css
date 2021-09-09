@@ -28,16 +28,45 @@ section .cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* background-color: red; */
 }
 .total a {
-  text-decoration: none;
-  background: #333;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   padding: 10px 25px;
+  height: 40px;
+  display: block;
+  letter-spacing: 2px;
+  margin: 15px 0;
+  font-family: "monospace";
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #333;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+  background-position: left bottom;
+  color: #fff;
+  background-color: black;
 }
-.total h3 {
+
+.total a:hover {
+  background: linear-gradient(to left, transparent 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #000;
+  font-size: 16px;
+}
+
+.total h2 {
   margin-right: 50px;
   color: crimson;
+}
+@media (max-width: 370px) {
+  .total {
+    flex-direction: column-reverse;
+    height: 100px;
+    align-items: center;
+  }
+  .total h2 {
+    margin-right: 0;
+  }
 }

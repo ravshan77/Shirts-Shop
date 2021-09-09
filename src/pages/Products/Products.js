@@ -7,27 +7,26 @@ const Products = () => {
 
     const context = useContext(DataContext)
 
-        const {products,addCard} = context;
+    const {products,addCard} = context;
 
-        return (
-            <div id="product">
-               {
-                   products?.map(product =>(
-                       <div  className="card" key={product._id}>
-                               <img src={product.src} alt=""/>
-                           <div className="content">
-                               <h3>
-                                   {product.title}
-                               </h3>
-                               <span>${product.price}</span>
-                               <button className="btn btn--black" onClick={() => addCard(product._id)}>Add to cart</button>
-                           </div>
-                       </div>
-                   ))
-               }
-            </div>
-        )
-    // }
+    return (
+        <div id="product">
+            {
+                products?.map(product =>(
+                    <div  className="card" key={product._id}>
+                            <img src={product.src} alt=""/>
+                        <div className="content">
+                            <h3>
+                                {product.title}
+                            </h3>
+                            <span>${product.price}</span>
+                            <button className="btn btn--black" onClick={() => addCard(product._id)}>Add to cart</button>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    )
 }
 
 export default Products

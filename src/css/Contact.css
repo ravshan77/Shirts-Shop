@@ -4,6 +4,8 @@
   height: 100vh;
   /* background: linear-gradient(0deg, rgb(14, 13, 13), #fff , #fff); */
   position: relative;
+  display: flex;
+
 }
 
 .wrapper {
@@ -17,6 +19,7 @@
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
 
 .wrapper h2 {
   color: #666;
@@ -99,7 +102,46 @@
 }
 
 @media (max-width: 600px) {
-  .wrapper{
+  .wrapper {
     width: 300px;
   }
+}
+
+.contact-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  width: 300px;
+  height: 120px;
+  display: flex;
+  margin: 20px 0;
+}
+
+@media (max-width: 1080px) {
+  .contact-info {
+    justify-content: space-around;
+  }
+}
+
+.contact-card i {
+  width: 50px;
+  height: 50px;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card div {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

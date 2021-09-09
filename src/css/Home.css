@@ -11,7 +11,8 @@
   align-items: center;
   height: 80vh;
   width: 100%;
-  background: url(https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=600) no-repeat fixed;
+  background: url(../assets/corusel-Ui/photo-1620799139507-2a76f79a2f4d.jpg)
+    no-repeat fixed;
   background-position: 100%;
   background-size: 100%;
   object-fit: cover;
@@ -40,11 +41,17 @@
   text-transform: uppercase;
   font-weight: 900;
   padding: 0 10px;
-  background-color: linear-gradient(90deg, transparent ,rgba(0,0,0, 0.5), transparent);
+  background-color: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
   transform-style: preserve-3d;
   line-height: 0.76em;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-  transform:translate(-50%,-50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(100px);
+  transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg))
+    translateZ(100px);
 }
 
 .boxs span i:nth-child(1) {
@@ -63,10 +70,21 @@
   .boxs span {
     font-size: 18px;
   }
+  .con {
+    height: 65vh;
+    background-image: url(../assets/corusel-Ui/photo-2.jpg);
+  }
 }
 
 @media (max-width: 1080px) {
   .con {
-    background-attachment:scroll ;
+    background-attachment: scroll;
   }
+}
+
+.supper-text{
+  text-align: center;
+  font-size:28px;
+  width: 100%;
+  margin: 30px 0; 
 }

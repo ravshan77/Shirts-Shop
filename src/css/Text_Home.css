@@ -28,6 +28,7 @@
 
 .with{
  width: 50%;
+ padding: 10px 10px;
 }
 
 @media (max-width: 768px) {
@@ -35,15 +36,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid 2px red;
   }
 
   .lorem {
     width: 90%;
   }
-}
-
-
-.b{
-  border: solid 2px blue;
 }

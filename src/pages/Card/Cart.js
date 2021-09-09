@@ -1,4 +1,4 @@
-import React, { Component,useContext,useEffect ,useState} from 'react'
+import React, { useContext } from 'react'
 import {DataContext} from '../../store/Context'
 import {Link} from 'react-router-dom'
 import Colors from '../Color/Colors'
@@ -12,7 +12,7 @@ const Cart =  () => {
     const {card,increase,decrease,removeCard} = context;
     
     const total = card?.map((card) => card.price * card.count);
-    const total_cost = total.reduce((a, b) => a + b, 0);
+    const total_cost = total?.reduce((a, b) => a + b, 0);
 
 
     const handleIncrement = (item) => {
@@ -27,38 +27,38 @@ const Cart =  () => {
         removeCard(item._id)
     }
         
-        return (card?.length === 0 ? <h2 style={{textAlign:"center"}}>Nothings Product</h2> : 
-       (
-           <>
-            {
-                card.map(item =>(
-                    <div className="details cart" key={item._id}>
-                        <img src={item.src} alt=""/>
-                        <div className="box">
-                            <div className="row">
-                                <h2>{item.title}</h2>
-                                <span>${item.price * item.count}</span>
-                            </div>
-                            <Colors colors={item.colors}/>
-                            <p>{item.description}</p>
-                            <p>{item.content}</p>
-                            <div className="amount">
-                                <button className="count" type="reset" onClick={() => handleDecrease(item)}> - </button>
-                                <span>{item.count}</span>
-                                <button className="count" onClick={() => handleIncrement(item)}> + </button>
-                            </div>
+    return (card?.length === 0 ? <h2 style={{textAlign:"center"}}>Nothings Product</h2> : 
+    (
+        <>
+        {
+            card?.map(item =>(
+                <div className="details cart" key={item._id}>
+                    <img src={item.src} alt=""/>
+                    <div className="box">
+                        <div className="row">
+                            <h2>{item.title}</h2>
+                            <span>${item.price * item.count}</span>
                         </div>
-                        <div className="delete" onClick={() => handleRemove(item)}>X</div>
+                        <Colors colors={item.colors}/>
+                        <p>{item.description}</p>
+                        <p>{item.content}</p>
+                        <div className="amount">
+                            <button className="count" type="reset" onClick={() => handleDecrease(item)}> - </button>
+                            <span>{item.count}</span>
+                            <button className="count" onClick={() => handleIncrement(item)}> + </button>
+                        </div>
                     </div>
-                ))
-            }
-            <div className="total">
-                <Link to="/payment">Payment</Link>
-                <h3>Total: ${total_cost}</h3>
-            </div>
-        </>
-        )
+                    <div className="delete" onClick={() => handleRemove(item)}>X</div>
+                </div>
+            ))
+        }
+        <div className="total">
+            <Link to="/payment">Payment</Link>
+            <h2>Total: ${total_cost}</h2>
+        </div>
+    </>
     )
+)
 }
 
 export default Cart;

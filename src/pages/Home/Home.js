@@ -4,6 +4,9 @@ import Corusel_Ui from "./corusel-Ui"
 import "../../css/Home.css"
 import Text_Home from "./Text_Home"
 import Focus from "./Focus"
+import About_Home from "./Home_About"
+import IntoText from "./intoText"
+import SupperText from "./SupperText";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
-  
-  
 
   return (
     <div className={classes.root}>
@@ -29,7 +30,16 @@ function Home() {
           <Text_Home />
       </section>
       <section className="">
+          <IntoText />
+      </section>
+      <section className="">
           <Focus />
+      </section>
+      <section className="">
+          <SupperText />
+      </section>
+      <section className="about-section">
+          <About_Home/>
       </section>
     </div>
   );

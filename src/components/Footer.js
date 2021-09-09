@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/Footer.css"
+import "../css/Contact.css"
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TelegramIcon from '@material-ui/icons/Telegram';
@@ -15,7 +16,7 @@ const Footer = () => {
         <section>
             <div className="footer">
                 <div className="footer_links">
-                    <div>
+                    <div className="input-field">
                         <h3>MORE FROM ASOS</h3>
                         <p>Mobile and ASOS apps</p>
                         <p>ASOS Markatlipce</p>
@@ -35,12 +36,21 @@ const Footer = () => {
                         <p>Corporate response</p>
                         <p>Investors' site</p>
                     </div>   
-                    <div>
-                        <input type="text" placeholder="Name"/>
-                        <input type="text" placeholder="Email"/>
-                        <textarea type="text" placeholder="Message" rows="3"/>
-                        <button className="btn btn--black">send</button>
-                    </div>
+                    <form className="">
+                        <div className="input-field">
+                        <input  required type="tel"/>
+                        <label>First Name</label>
+                        </div>
+                        <div className="input-field">
+                        <input  required type="email"/>
+                        <label>Email</label>
+                        </div>
+                        <div className="input-field">
+                          <textarea required typeof="text" rows="3"/>
+                          <label>Message</label>
+                        </div>
+                        <button type="submit" name="" value="Send Message" className="btn btn--black">send</button>
+                    </form>
                 </div>
                 <div className="footer_icons">
                     <div>
@@ -51,7 +61,7 @@ const Footer = () => {
                         <YouTubeIcon />
                         <TwitterIcon />
                     </div>
-                    <div>© 2021 - 2022 glotr.uz. All rights reserved</div>
+                    <div>© 2021 - 2022 Created by R.Fayziyev . All rights reserved</div>
                 </div>
             </div>
         </section>

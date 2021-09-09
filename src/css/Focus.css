@@ -16,7 +16,7 @@
   text-transform: uppercase;
   font-weight: 800;
   z-index: 2;
-  transition: 2s;
+  transition: 1s;
   height: 100px;
 }
 
@@ -33,7 +33,7 @@
   height: 140%;
   pointer-events: none;
   filter: blur(20px);
-  transition: 2s;
+  transition: 0.5s;
   object-fit: cover;
 }
 
