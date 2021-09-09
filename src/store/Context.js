@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import data from "../data"
+import i19 from "../assets/product_imges/9.jpg"
 
 export const DataContext = React.createContext();
 
@@ -11,7 +12,7 @@ const DataProvider = (props) => {
   count: 1,
   description: "UI/UX designing, html css tutorials",
   price: 19,
-  src: "/shopping-cart-react/static/media/18.1762ef92.jpg",
+  src:i19,
   title: "Shirts 29",
   _id: "200",}]}) // cards order
   const [state, setState] = useState(data);   // initialState
