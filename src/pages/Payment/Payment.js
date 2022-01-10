@@ -1,11 +1,12 @@
 import React, { useContext  } from 'react'
-import { Redirect} from 'react-router-dom'
+import { Redirect,useHistory} from 'react-router-dom'
 import "../../css/Payment.css"
 import {DataContext} from '../../store/Context'
 
 
 const Payment = () => {
     const context =useContext(DataContext) 
+    const history = useHistory()
     const {card,payOrder} = context; // context
     // calc dates
     const total_count = card?.map((card) =>{ return( card.count)});
@@ -13,16 +14,19 @@ const Payment = () => {
     const total_cost = total?.reduce((a, b) => a + b, 0);
     const total_counts = total_count?.reduce((a, b) => a + b, 0);
 
-    const onSubmitHandler = ()=>{
+    function onSubmitHandler (){
         payOrder() 
-        return <Redirect to="/" />
+        setTimeout(function(){
+            return history.push("/")
+        },2000)
+        // return history.push("/")
     }
 
     return (
         <div>
             <section className="payment">
             <div className="wrapperOne"> 
-                <form onSubmit={onSubmitHandler()}>
+                <form onSubmit={() => onSubmitHandler()}>
                 <div className="input-field">
                         <input   type="text"/>
                         <label>Name</label>
