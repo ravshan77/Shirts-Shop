@@ -1,7 +1,7 @@
 {
-  "homepage": "https://shirts_shopuz.netlify.app/",
-  "name": "shirts_shop",
-  "version": "0.1.0",
+  "homepage": "https://shirtshop.netlify.app/",
+  "name": "Shirts Shop",
+  "version": "1.1.1",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.2",
