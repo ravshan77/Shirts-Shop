@@ -41,7 +41,7 @@ Proceed to describe how to install / setup one's local environment / get started
 
 In the environment terminal, perform the following operation in sequence:
 
-1) git clone https://github.com/ravshan77/Native-union.git
+1) git clone https://github.com/ravshan77/Shirts-Shop.git
 2) npm i
 
 ## Usage
